@@ -6,13 +6,17 @@ import (
 )
 
 var (
-	a = 40
-	b int = 50
+	a = 10
+	b, c int = 20, 30
 )
 
 func main() {
-	c := 60
+	d := 60
 	fmt.Printf(stringUtils.Reverse("\noG ,olleH"))
-	fmt.Printf("%v + %v + %v = %v", a, b, c, a+b+c)
+	fmt.Printf("%v + %v = %v", a, b, a+b)
+	fmt.Printf("%v + %v = %v", c, d, add(c,d))
 }
 
+func add(n1, n2) int {
+	return n1+n2
+}
